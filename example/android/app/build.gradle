@@ -1,3 +1,5 @@
+package example.android.app
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -27,6 +29,8 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
     compileSdkVersion 31
+    namespace 'yukams.app.background_locator_2'  // 👈 Add this
+
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
