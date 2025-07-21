@@ -1,3 +1,5 @@
+package android
+
 group 'yukams.app.background_locator_2'
 version '1.0-SNAPSHOT'
 
@@ -26,6 +28,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 29
+    namespace 'yukams.app.background_locator_2'  // 👈 Add this
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
