@@ -26,15 +26,12 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 30
-    namespace 'yukams.app.background_locator_2'  // 👈 Add this
+    namespace 'yukams.app.background_locator_2'
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
-    kotlin {
-        jvmToolchain {
-            (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(11))
-        }
-    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
@@ -48,10 +45,12 @@ android {
         minSdkVersion 19
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     lintOptions {
         disable 'InvalidPackage'
     }
 }
+
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
